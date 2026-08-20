@@ -1,0 +1,66 @@
+===================================================================
+ALEX RIVERA
+Computer Science & AI Undergraduate | Full-Stack & ML Developer
+===================================================================
+
+CONTACT & LINKS
+-------------------------------------------------------------------
+Email: alex.rivera@university.edu
+Phone: +1 (555) 234-5678
+Location: San Francisco, CA
+LinkedIn: https://linkedin.com/in/alexrivera-tech
+GitHub: https://github.com/alexrivera-dev
+Portfolio/Website: https://alexrivera.dev
+
+PROFESSIONAL SUMMARY
+-------------------------------------------------------------------
+Ambitious Computer Science undergraduate student specializing in Artificial Intelligence, Web Development, and Data Engineering. Proven track record of building production-ready web apps, fine-tuning LLMs, and leading collaborative student developer projects. Passionate about leveraging AI to create intuitive human-centric software solutions.
+
+TECHNICAL SKILLS
+-------------------------------------------------------------------
+- Programming Languages: Python, JavaScript, TypeScript, HTML5, CSS3, SQL, C++
+- AI & Data Science: PyTorch, Scikit-Learn, Gemini API, OpenAI API, Pandas, NumPy
+- Web Frameworks & Tools: Node.js, Express, Flask, React, TailwindCSS, REST APIs
+- Cloud & DevOps: Docker, Git, GitHub Actions, Vercel, Firebase, Postman
+
+EDUCATION
+-------------------------------------------------------------------
+Bachelor of Science in Computer Science (Specialization in AI)
+California State University, San Francisco | Expected May 2026
+- GPA: 3.85 / 4.00
+- Relevant Coursework: Data Structures & Algorithms, Artificial Intelligence, Machine Learning, Database Systems, Web Development, Software Engineering
+
+EXPERIENCE
+-------------------------------------------------------------------
+AI Software Engineering Intern | TechNext Labs, San Francisco, CA
+June 2025 - August 2025
+- Integrated Gemini API and OpenAI APIs into customer support workflows, reducing query response times by 40%.
+- Developed clean, responsive frontend components using React and CSS Modules for the flagship SaaS product.
+- Optimized SQL database queries and API endpoints, improving server throughput by 25%.
+
+Computer Science Peer Tutor | University Learning Center
+September 2024 - Present
+- Conducted weekly tutoring sessions in Data Structures, Object-Oriented Programming in Python, and Web Development for over 60 undergraduate students.
+- Designed interactive coding workshops and sample starter repositories on GitHub.
+
+PROJECTS
+-------------------------------------------------------------------
+1. Smart Resume Portfolio Generator (Python, Gemini API, HTML/CSS)
+   - Built a Python CLI application that extracts structured resume data via Google Gemini API and dynamically compiles responsive portfolio webpages.
+   - Implemented strict prompt validation and JSON parsing to eliminate hallucinations and missing data errors.
+   - GitHub: https://github.com/alexrivera-dev/resume-portfolio-generator
+
+2. EcoTrack - Carbon Footprint Dashboard (React, Node.js, Firebase)
+   - Created a dynamic web application enabling users to calculate, visualize, and track monthly household carbon emissions.
+   - Integrated Chart.js for interactive analytics dashboards and Firebase for secure user authentication and data persistence.
+
+3. AI Code Assistant Extension (TypeScript, Python, Fast-API)
+   - Developed a VS Code extension that automatically generates unit test suites for Python and JavaScript functions using generative AI.
+   - Received 500+ downloads on the Visual Studio Marketplace.
+
+ACHIEVEMENTS & CERTIFICATIONS
+-------------------------------------------------------------------
+- 1st Place Winner - University Annual Hackathon 2025 (Out of 45 teams)
+- Google Cloud Certified - Cloud Digital Leader (Issued Nov 2024)
+- Dean's Honor List - California State University (2023, 2024, 2025)
+- Meta Front-End Developer Professional Certificate (Coursera, 2024)

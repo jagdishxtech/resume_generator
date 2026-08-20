@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PORTFOLIO_TITLE}}</title>
+  <meta name="description" content="{{PORTFOLIO_META_DESCRIPTION}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    
+    <!-- Hero / Profile Section -->
+    <header class="section hero-card" id="hero">
+      <h1 class="hero-name" id="user-name">{{NAME}}</h1>
+      <p class="hero-headline" id="user-headline">{{HEADLINE}}</p>
+      <p class="hero-summary" id="user-summary">{{SUMMARY}}</p>
+      
+      <nav class="quick-links" id="quick-links" aria-label="Contact Links">
+        {{QUICK_LINKS_HTML}}
+      </nav>
+    </header>
+
+    <!-- Skills Section -->
+    {{SKILLS_SECTION_HTML}}
+
+    <!-- Experience Section -->
+    {{EXPERIENCE_SECTION_HTML}}
+
+    <!-- Projects Section -->
+    {{PROJECTS_SECTION_HTML}}
+
+    <!-- Education Section -->
+    {{EDUCATION_SECTION_HTML}}
+
+    <!-- Achievements Section -->
+    {{ACHIEVEMENTS_SECTION_HTML}}
+
+    <!-- Contact & Links Section -->
+    {{CONTACT_SECTION_HTML}}
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Generated automatically with <span>AI Resume Portfolio Generator</span> • Powered by Python & Gemini API</p>
+    </footer>
+  </main>
+</body>
+</html>
