@@ -257,7 +257,7 @@
       border: 1px solid rgba(99, 102, 241, 0.3);
     }
 
-    .action-buttons { display: flex; gap: 0.5rem; }
+    .action-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
     .btn-secondary {
       background: rgba(255, 255, 255, 0.08);
@@ -334,27 +334,22 @@
 </head>
 <body>
 
-  <!-- Top Navbar -->
   <nav class="navbar">
     <div class="brand">
       ⚡ AI Resume Portfolio Generator
-    
     </div>
     <div>
       <a href="/portfolio.html" target="_blank" class="btn-secondary">🌐 View Sample Portfolio</a>
     </div>
   </nav>
 
-  <!-- Application Main Split Layout -->
   <main class="app-layout">
 
-    <!-- Left Controls Panel -->
     <section class="panel">
       <h2 class="panel-title"><span>1.</span> Input Resume & Settings</h2>
       
       <div id="alert-banner" class="alert alert-error"></div>
 
-      <!-- File Upload Zone (.txt or .html files) -->
       <div class="form-group">
         <label>Upload Resume File (.txt or .html)</label>
         <div class="dropzone" id="dropzone" onclick="document.getElementById('file-input').click()">
@@ -367,13 +362,11 @@
 
       <div style="text-align: center; color: var(--text-muted); font-size: 0.75rem; font-weight: bold;">OR PASTE TEXT / HTML BELOW</div>
 
-      <!-- Resume Textarea -->
       <div class="form-group">
         <label>Paste Resume Content</label>
         <textarea id="resume-text" placeholder="Paste full resume text or HTML content here..."></textarea>
       </div>
 
-      <!-- Optional Custom HTML Template Upload -->
       <div class="form-group">
         <label>Upload Custom HTML Template (.html) - Optional</label>
         <div style="display: flex; gap: 0.5rem; align-items: center;">
@@ -383,14 +376,12 @@
         <input type="file" id="template-input" accept=".html,.htm">
       </div>
 
-      <!-- Submit Button -->
       <button class="btn-generate" id="generate-btn" onclick="generatePortfolio()">
         <span class="spinner" id="btn-spinner"></span>
         <span id="btn-text">✨ Generate Portfolio Webpage</span>
       </button>
     </section>
 
-    <!-- Right Output & Preview Panel -->
     <section class="panel output-panel">
       <div class="tabs-bar">
         <div class="tabs">
@@ -400,22 +391,20 @@
         </div>
         
         <div class="action-buttons">
+          <a id="open-new-tab-btn" href="/portfolio.html" target="_blank" class="btn-secondary">Full Preview</a>
           <button class="btn-secondary" onclick="copyHTMLCode()">📋 Copy HTML</button>
           <a href="/api/download" class="btn-secondary" style="background: var(--primary-gradient);">📥 Download portfolio.html</a>
         </div>
       </div>
 
-      <!-- Live Webpage Preview -->
       <div id="preview-tab" class="tab-content active preview-container">
         <iframe id="portfolio-frame" src="/portfolio.html"></iframe>
       </div>
 
-      <!-- HTML Source Code View -->
       <div id="code-tab" class="tab-content">
         <pre id="code-block">Click "Generate Portfolio Webpage" to view rendered HTML code...</pre>
       </div>
 
-      <!-- Parsed JSON View -->
       <div id="json-tab" class="tab-content">
         <pre id="json-block">Click "Generate Portfolio Webpage" to view extracted JSON schema...</pre>
       </div>
@@ -526,11 +515,19 @@
         if (result.success) {
           showAlert('Portfolio generated successfully!', 'success');
           
-          // Refresh Iframe preview
-          const iframe = document.getElementById('portfolio-frame');
-          iframe.src = '/portfolio.html?t=' + new Date().getTime();
+          const cacheBustedUrl = '/portfolio.html?t=' + new Date().getTime();
 
-          // Populate HTML & JSON code blocks
+          // 1. Refresh Iframe preview
+          const iframe = document.getElementById('portfolio-frame');
+          iframe.src = cacheBustedUrl;
+
+          // 2. Update the "Open in New Tab" link
+          const openNewTabBtn = document.getElementById('open-new-tab-btn');
+          if (openNewTabBtn) {
+            openNewTabBtn.href = cacheBustedUrl;
+          }
+
+          // 3. Populate HTML & JSON code blocks
           document.getElementById('code-block').textContent = result.html_code;
           document.getElementById('json-block').textContent = JSON.stringify(result.portfolio_data, null, 2);
         } else {
