@@ -1,0 +1,21 @@
+# Environment variables
+.env
+
+# Python cache & build files
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Generated portfolio (optional, uncomment if portfolio shouldn't be tracked)
+# portfolio.html
